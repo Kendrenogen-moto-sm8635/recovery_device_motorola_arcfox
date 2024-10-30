@@ -16,7 +16,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 # Inherit some common TWRP stuff.
 $(call inherit-product, vendor/twrp/config/common.mk)
 
-# Inherit from hiphi device
+# Inherit from arcfox device
 $(call inherit-product, device/motorola/arcfox/device.mk)
 
 PRODUCT_DEVICE := arcfox
