@@ -10,5 +10,5 @@ service vendor.keymint-qti /vendor/bin/hw/android.hardware.security.keymint-serv
     user root
     group root
     disabled
-    setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib:/system/lib64:/system/lib:/sbin
+    setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib64/hw:/vendor/lib:/system/lib64:/system/lib:/sbin
     seclabel u:r:recovery:s0
