@@ -39,10 +39,11 @@ on fs
     wait /sys/class/power_supply/battery
 
 on post-fs
-    start boot-hal-1-2
+    start boot-qti
 
 on boot
-    start health-hal-2-1
+    start health-default
+	start qti.vibrator    
 
 service set_permissive /vendor/bin/set_permissive.sh
     user root

@@ -6,14 +6,14 @@ on late-fs
     chmod 0666 /dev/qcom_haptic
     chown system system /dev/qcom_haptic
 
-service vendor.qti.vibrator /vendor/bin/hw/vendor.qti.hardware.vibrator.service
+service qti.vibrator /vendor/bin/hw/vendor.qti.hardware.vibrator.service
     class hal
     user root
     group root
-    disabled
     setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib64/hw:/vendor/lib:/system/lib64:/system/lib:/sbin
     setenv RICHTAP_DEVICE_PATH  /dev/qcom_haptic
     setenv ENV_RICHTAP_CONFIG_PATH /odm/etc/aac_richtap.config
+    disabled    
     seclabel u:r:recovery:s0
 
 on property:sys.boot_completed=1

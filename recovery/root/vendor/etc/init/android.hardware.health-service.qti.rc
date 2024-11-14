@@ -1,9 +1,8 @@
-service vendor.health-default /vendor/bin/hw/android.hardware.health-service.qti
-    class hal
+service health-default /vendor/bin/hw/android.hardware.health-service.qti
+	interface aidl android.hardware.health.IHealth/default
     user root
     group root
     disabled
-    setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib64/hw:/vendor/lib:/system/lib64:/system/lib:/sbin
     capabilities WAKE_ALARM BLOCK_SUSPEND
     file /dev/kmsg w
     seclabel u:r:recovery:s0    
