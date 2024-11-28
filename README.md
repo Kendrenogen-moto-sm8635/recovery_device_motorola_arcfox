@@ -44,12 +44,37 @@ Current state of features:
 - [x] Screenshot
 - [x] Advanced features
 
-# Building
+# Compiling TWRP
+
+First, initialize twrp-14 sources:
+```bash
+repo init -u https://github.com/Kendrenogen/platform_manifest_twrp_aosp.git -b twrp-14
+```
+
+Then sync the sources:
+```bash
+repo sync -j4
+```
+
+To fix compilation for twrp-14:
+```bash
+. build/envsetup.sh; repopick -Q "branch:android-14+status:open+-change:7371+-change:7543+-change:7553+-change:7671+-change:7717+-change:7718"
+```
+
+To compile TWRP:
+
+First, clone this device tree to device/motorola/arcfox using:
+```bash
+git clone https://github.com/Kendrenogen/recovery_device_motorola_arcfox.git -b twrp-14 device/motorola/arcfox
+```
+
+Then run this to compile TWRP:
+
 ```bash
 export ALLOW_MISSING_DEPENDENCIES=true
 source build/envsetup.sh
 lunch twrp_arcfox-eng
-mka recoveryimage -j$(nproc --all)
+mka recoveryimage -j4
 ```
 
 **Copyright (C) 2023 Team Win Recovery Project**
