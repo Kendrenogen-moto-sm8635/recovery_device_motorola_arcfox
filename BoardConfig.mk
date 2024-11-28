@@ -37,7 +37,6 @@ TARGET_CPU_VARIANT_RUNTIME := kryo300
 
 # Bootloader
 TARGET_NO_BOOTLOADER := false
-TARGET_USES_UEFI := true
 TARGET_USES_REMOTEPROC := true
 
 # Display
