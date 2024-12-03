@@ -48,7 +48,7 @@ Current state of features:
 
 First, initialize twrp-14 sources:
 ```bash
-repo init -u https://github.com/Kendrenogen/platform_manifest_twrp_aosp.git -b twrp-14
+repo init -u https://github.com/Kendrenogen-moto-sm8635/platform_manifest_twrp_aosp.git -b twrp-14
 ```
 
 Then sync the sources:
@@ -65,7 +65,7 @@ To compile TWRP:
 
 First, clone this device tree to device/motorola/arcfox using:
 ```bash
-git clone https://github.com/Kendrenogen/recovery_device_motorola_arcfox.git -b twrp-14 device/motorola/arcfox
+git clone https://github.com/Kendrenogen-moto-sm8635/recovery_device_motorola_arcfox.git -b twrp-14 device/motorola/arcfox
 ```
 
 Then run this to compile TWRP:
